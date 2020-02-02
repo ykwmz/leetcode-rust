@@ -1,5 +1,3 @@
-use std::cmp::{max, min};
-
 fn zigzag_convert(s: String, num_rows: i32) -> String {
     if num_rows < 2 {
         return s;
