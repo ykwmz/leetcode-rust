@@ -6,3 +6,4 @@ pub mod longest_palindrome;
 pub mod zigzag_convert;
 pub mod reverse_integer;
 pub mod combination_sum;
+pub mod find_max_length;
