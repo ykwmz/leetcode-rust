@@ -1,4 +1,3 @@
-use std::cmp::min;
 use std::collections::HashMap;
 
 // 1049
@@ -37,24 +36,24 @@ pub fn last_stone_weight_ii(stones: Vec<i32>) -> i32 {
     // *counts_last.keys().min().unwrap_or(&0)
 }
 
-fn last_stone_weight_ii_inner(stones: Vec<i32>, weight_left: &mut i32) {
-    // special cases
-    if stones.len() == 1 {
-        *weight_left = min(stones[0], *weight_left);
-    } else if stones.len() == 2 {
-        *weight_left = min((stones[0] - stones[1]).abs(), *weight_left);
-    } else {
-        // let mut stones_cur = stones[1..].to_vec();
-        let stone_first = stones[0];
-        for (j,stone_next) in (&stones[1..]).iter().enumerate() {
-            let mut stones_next = Vec::from(&stones[1..]);
-            if let Some(stone) = stones_next.get_mut(j) {
-                *stone = (stone_first - *stone_next).abs();
-            }
-            last_stone_weight_ii_inner(stones_next.to_vec(), weight_left);
-        }
-    }
-}
+// fn last_stone_weight_ii_inner(stones: Vec<i32>, weight_left: &mut i32) {
+//     // special cases
+//     if stones.len() == 1 {
+//         *weight_left = min(stones[0], *weight_left);
+//     } else if stones.len() == 2 {
+//         *weight_left = min((stones[0] - stones[1]).abs(), *weight_left);
+//     } else {
+//         // let mut stones_cur = stones[1..].to_vec();
+//         let stone_first = stones[0];
+//         for (j,stone_next) in (&stones[1..]).iter().enumerate() {
+//             let mut stones_next = Vec::from(&stones[1..]);
+//             if let Some(stone) = stones_next.get_mut(j) {
+//                 *stone = (stone_first - *stone_next).abs();
+//             }
+//             last_stone_weight_ii_inner(stones_next.to_vec(), weight_left);
+//         }
+//     }
+// }
 
 #[test]
 fn last_stone_weight_ii_3() {

@@ -6,25 +6,25 @@ candidate 中的每个元素都是独一无二的。
 1 <= target <= 500
 */
 pub fn combination_sum(candidates: Vec<i32>, target: i32) -> Vec<Vec<i32>> {
-    let mut candidatesOrdered:Vec<i32> = candidates.to_vec();
-    let mut targetArray:Vec<Vec<i32>> = Vec::new();
+    let mut candidates_ordered:Vec<i32> = candidates.to_vec();
+    let mut target_array:Vec<Vec<i32>> = Vec::new();
 
-    pub fn sum(index: usize, candidates: &Vec<i32>, targetSubArray: Vec<i32>, targetSubSum: i32, targetArray: &mut Vec<Vec<i32>>, targetSum: i32 ) {
+    pub fn sum(index: usize, candidates: &Vec<i32>, target_sub_array: Vec<i32>, target_sub_sum: i32, target_array: &mut Vec<Vec<i32>>, target_sum: i32 ) {
         if index >= candidates.len() {
             return;
         }
-        let curCandidate = candidates[index];
-        let targetSubSum = curCandidate + targetSubSum;
-        match targetSubSum {
-            d if d<targetSum => {
+        let cur_candidate = candidates[index];
+        let target_sub_sum = cur_candidate + target_sub_sum;
+        match target_sub_sum {
+            d if d< target_sum => {
                 // to self and next all
                 for i in 0..candidates.len()-index {
-                    sum(index+i, candidates, [targetSubArray.to_vec(), [curCandidate].to_vec()].concat(), targetSubSum, targetArray, targetSum);
+                    sum(index+i, candidates, [target_sub_array.to_vec(), [cur_candidate].to_vec()].concat(), target_sub_sum, target_array, target_sum);
                 }
             },
-            d if d>targetSum => return,
-            d if d==targetSum => {
-                targetArray.push([targetSubArray.to_vec(), [curCandidate].to_vec()].concat());
+            d if d> target_sum => return,
+            d if d== target_sum => {
+                target_array.push([target_sub_array.to_vec(), [cur_candidate].to_vec()].concat());
                 return;
             }
             _ => return
@@ -32,22 +32,22 @@ pub fn combination_sum(candidates: Vec<i32>, target: i32) -> Vec<Vec<i32>> {
         return;
     }
 
-    candidatesOrdered.sort();
-    let _ = match candidatesOrdered.iter().rposition(|&v|v<=target) {
-        Some(at) => candidatesOrdered.split_off(at+1),
+    candidates_ordered.sort();
+    let _ = match candidates_ordered.iter().rposition(|&v|v<=target) {
+        Some(at) => candidates_ordered.split_off(at+1),
         _ => [].to_vec()
     };
 
     // found by DFS
-    for (i,v) in candidatesOrdered.iter().enumerate() {
+    for (i,v) in candidates_ordered.iter().enumerate() {
         match v {
-            &v if v < target => sum(i, &candidatesOrdered, Vec::new(), 0, &mut targetArray, target),
-            &v if v == target => targetArray.insert(0, vec![v]),
+            &v if v < target => sum(i, &candidates_ordered, Vec::new(), 0, &mut target_array, target),
+            &v if v == target => target_array.insert(0, vec![v]),
             _ => break
         }
     }
 
-    targetArray
+    target_array
 }
 
 #[cfg(test)]

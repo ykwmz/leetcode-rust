@@ -29,7 +29,5 @@ pub fn find_target_sum_ways(nums: Vec<i32>, target: i32) -> i32 {
 #[test]
 fn find_target_sum_ways_0() {
     let nums = vec![1,1,1,1,1];
-    let target = 3;
-
     assert_eq!(find_target_sum_ways(nums, 3), 5);
 }

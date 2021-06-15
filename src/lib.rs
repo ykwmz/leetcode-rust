@@ -11,3 +11,5 @@ pub mod find_target_sum_ways;
 pub mod last_stone_weight_ii;
 pub mod profitable_schemes;
 pub mod change_ii;
+pub mod num_squares;
+pub mod peak_index_in_mountain_array; //#852

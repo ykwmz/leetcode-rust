@@ -87,69 +87,69 @@ fn find_median_sorted_arrays(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 {
     }
 }
 
-fn find_median_sorted_arrays3(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 {
-    let mut nums1_iter = 0;
-    let mut nums2_iter = 0;
-    let len = nums1.len() + nums2.len();
-    let mut num_half = 0.0;
-    let mut num_half_pre = 0.0;
-    let mut i = 0;
-    loop {
-        if nums1_iter == nums1.len() && nums2_iter == nums2.len() {
-            break;
-        }
-
-        let num;
-        if nums1_iter == nums1.len() {
-            num = nums2.get(nums2_iter..nums2_iter+1).unwrap().first().unwrap();
-            nums2_iter = nums2_iter + 1;
-        } else if nums2_iter == nums2.len() {
-            num = nums1.get(nums1_iter..nums1_iter+1).unwrap().first().unwrap();
-            nums1_iter = nums1_iter + 1;
-        } else {
-            let num1 = nums1.get(nums1_iter..nums1_iter+1).unwrap().first().unwrap();
-            let num2 = nums2.get(nums2_iter..nums2_iter+1).unwrap().first().unwrap();
-            if num1 < num2 {
-                num = num1;
-                nums1_iter = nums1_iter + 1;
-            } else {
-                num = num2;
-                nums2_iter = nums2_iter + 1;
-            }
-        }
-
-        if len > 1 && i == len/2-1 {
-            num_half_pre = num.clone() as f64;
-        } else if i == len/2 {
-            num_half = num.clone() as f64;
-            break;
-        }
-
-        i = i + 1;
-    }
-
-    if len % 2 == 0 {
-        (num_half_pre + num_half)/2.0
-    } else {
-        num_half
-    }
-}
+// fn find_median_sorted_arrays3(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 {
+//     let mut nums1_iter = 0;
+//     let mut nums2_iter = 0;
+//     let len = nums1.len() + nums2.len();
+//     let mut num_half = 0.0;
+//     let mut num_half_pre = 0.0;
+//     let mut i = 0;
+//     loop {
+//         if nums1_iter == nums1.len() && nums2_iter == nums2.len() {
+//             break;
+//         }
+//
+//         let num;
+//         if nums1_iter == nums1.len() {
+//             num = nums2.get(nums2_iter..nums2_iter+1).unwrap().first().unwrap();
+//             nums2_iter = nums2_iter + 1;
+//         } else if nums2_iter == nums2.len() {
+//             num = nums1.get(nums1_iter..nums1_iter+1).unwrap().first().unwrap();
+//             nums1_iter = nums1_iter + 1;
+//         } else {
+//             let num1 = nums1.get(nums1_iter..nums1_iter+1).unwrap().first().unwrap();
+//             let num2 = nums2.get(nums2_iter..nums2_iter+1).unwrap().first().unwrap();
+//             if num1 < num2 {
+//                 num = num1;
+//                 nums1_iter = nums1_iter + 1;
+//             } else {
+//                 num = num2;
+//                 nums2_iter = nums2_iter + 1;
+//             }
+//         }
+//
+//         if len > 1 && i == len/2-1 {
+//             num_half_pre = num.clone() as f64;
+//         } else if i == len/2 {
+//             num_half = num.clone() as f64;
+//             break;
+//         }
+//
+//         i = i + 1;
+//     }
+//
+//     if len % 2 == 0 {
+//         (num_half_pre + num_half)/2.0
+//     } else {
+//         num_half
+//     }
+// }
 
 //nums1 = [1, 2]
 //nums2 = [3, 4]
 //
 //则中位数是 (2 + 3)/2 = 2.5
-fn find_median_sorted_arrays2(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 {
-    let mut nums: Vec<i32> = [&nums1[..], &nums2[..]].concat();
-    nums.sort();
-
-    let len = nums.len();
-    if len % 2 == 0 {
-        (nums[len/2-1] as f64 + nums[len/2] as f64)/2.0
-    } else {
-        nums[len/2] as f64
-    }
-}
+// fn find_median_sorted_arrays2(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 {
+//     let mut nums: Vec<i32> = [&nums1[..], &nums2[..]].concat();
+//     nums.sort();
+//
+//     let len = nums.len();
+//     if len % 2 == 0 {
+//         (nums[len/2-1] as f64 + nums[len/2] as f64)/2.0
+//     } else {
+//         nums[len/2] as f64
+//     }
+// }
 
 #[test]
 fn test_find_median_sorted_arrays() {
