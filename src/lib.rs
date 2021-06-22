@@ -14,3 +14,4 @@ pub mod change_ii;
 pub mod num_squares; //#279
 pub mod peak_index_in_mountain_array; //#852
 pub mod stone_game; //#877
+pub mod permutation; //#剑指Offer 38
