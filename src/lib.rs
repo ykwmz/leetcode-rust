@@ -17,3 +17,4 @@ pub mod stone_game; //#877
 pub mod permutation; //#剑指Offer 38
 pub mod open_lock; // #752
 pub mod convert_to_title; // #168
+pub mod num_ways; // LCP 07. 传递信息
