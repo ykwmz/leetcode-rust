@@ -18,3 +18,7 @@ pub mod permutation; //#剑指Offer 38
 pub mod open_lock; // #752
 pub mod convert_to_title; // #168
 pub mod num_ways; // LCP 07. 传递信息
+// 1833. 雪糕的最大数量
+pub mod max_ice_cream;
+// 451. 根据字符出现频率排序
+pub mod frequency_sort;
