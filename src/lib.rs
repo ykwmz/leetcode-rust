@@ -22,3 +22,5 @@ pub mod num_ways; // LCP 07. 传递信息
 pub mod max_ice_cream;
 // 451. 根据字符出现频率排序
 pub mod frequency_sort;
+// 645. 错误的集合
+mod find_error_nums;
