@@ -24,3 +24,5 @@ pub mod max_ice_cream;
 pub mod frequency_sort;
 // 645. 错误的集合
 mod find_error_nums;
+// 1418. 点菜展示表
+mod display_table;
