@@ -26,3 +26,5 @@ pub mod frequency_sort;
 mod find_error_nums;
 // 1418. 点菜展示表
 mod display_table;
+// 1711. 大餐计数
+mod count_pairs;
