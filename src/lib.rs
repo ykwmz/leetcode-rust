@@ -30,3 +30,5 @@ mod display_table;
 mod count_pairs;
 // 930. 和相同的二元子数组
 mod num_subarrays_with_sum;
+// 面试题 17.10. 主要元素
+mod majority_element;
