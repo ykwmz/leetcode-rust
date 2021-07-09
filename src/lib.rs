@@ -28,3 +28,5 @@ mod find_error_nums;
 mod display_table;
 // 1711. 大餐计数
 mod count_pairs;
+// 930. 和相同的二元子数组
+mod num_subarrays_with_sum;

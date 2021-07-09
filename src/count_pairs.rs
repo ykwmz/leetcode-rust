@@ -33,7 +33,7 @@ pub fn count_pairs(deliciousness: Vec<i32>) -> i32 {
             }
             if let Some(&d) = deliciousness_ordered.get(&(left_part.to_string())) {
                 count += d;
-                count %= (10i32.pow(9) + 7);
+                count %= 10i32.pow(9) + 7;
             }
         }
     }
