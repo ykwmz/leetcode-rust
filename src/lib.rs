@@ -32,3 +32,5 @@ mod count_pairs;
 mod num_subarrays_with_sum;
 // 面试题 17.10. 主要元素
 mod majority_element;
+// 981. 基于时间的键值存储
+mod time_map;
