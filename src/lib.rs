@@ -34,3 +34,5 @@ mod num_subarrays_with_sum;
 mod majority_element;
 // 981. 基于时间的键值存储
 mod time_map;
+// 1846. 减小和重新排列数组后的最大元素
+mod maximum_element_after_decrementing_and_rearranging;
