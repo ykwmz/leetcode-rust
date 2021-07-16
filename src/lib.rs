@@ -36,3 +36,5 @@ mod majority_element;
 mod time_map;
 // 1846. 减小和重新排列数组后的最大元素
 mod maximum_element_after_decrementing_and_rearranging;
+// 剑指 Offer 53 - I. 在排序数组中查找数字 I
+mod search;
