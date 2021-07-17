@@ -38,3 +38,5 @@ mod time_map;
 mod maximum_element_after_decrementing_and_rearranging;
 // 剑指 Offer 53 - I. 在排序数组中查找数字 I
 mod search;
+// 剑指 Offer 42. 连续子数组的最大和
+mod max_sub_array;
