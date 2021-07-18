@@ -11,7 +11,7 @@ pub fn display_table(orders: Vec<Vec<String>>) -> Vec<Vec<String>> {
     for order in orders.iter() {
         food_names.push(order[2].clone());
         let table_num:usize = order[1].parse().unwrap();
-        let mut table_pre_row = table_pre.get_mut(table_num).unwrap();
+        let table_pre_row = table_pre.get_mut(table_num).unwrap();
         if let Some(o) = table_pre_row.get_mut(&*order[2]) {
             *o += 1;
         } else {

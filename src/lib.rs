@@ -40,3 +40,5 @@ mod maximum_element_after_decrementing_and_rearranging;
 mod search;
 // 剑指 Offer 42. 连续子数组的最大和
 mod max_sub_array;
+// 面试题 10.02. 变位词组
+mod group_anagrams;
