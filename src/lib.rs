@@ -42,3 +42,5 @@ mod search;
 mod max_sub_array;
 // 面试题 10.02. 变位词组
 mod group_anagrams;
+// 1838. 最高频元素的频数
+mod max_frequency;
