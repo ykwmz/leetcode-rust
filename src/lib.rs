@@ -15,7 +15,8 @@ pub mod num_squares; //#279
 pub mod peak_index_in_mountain_array; //#852
 pub mod stone_game; //#877
 pub mod permutation; //#剑指Offer 38
-pub mod open_lock; // #752
+// #752. 打开转盘锁
+pub mod open_lock;
 pub mod convert_to_title; // #168
 pub mod num_ways; // LCP 07. 传递信息
 // 1833. 雪糕的最大数量
