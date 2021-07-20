@@ -44,3 +44,5 @@ mod max_sub_array;
 mod group_anagrams;
 // 1838. 最高频元素的频数
 mod max_frequency;
+// 1877. 数组中最大数对和的最小值
+mod min_pair_sum;
