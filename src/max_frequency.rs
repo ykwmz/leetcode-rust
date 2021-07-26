@@ -1,4 +1,4 @@
-use std::collections::HashMap;
+// use std::collections::HashMap;
 use std::cmp::max;
 
 // 元素的 频数 是该元素在一个数组中出现的次数。
@@ -31,47 +31,47 @@ pub fn max_frequency(nums: Vec<i32>, k: i32) -> i32 {
     res as i32
 }
 
-pub fn max_frequency_1(nums: Vec<i32>, k: i32) -> i32 {
-    let mut nums_map:HashMap<i32, i32> = HashMap::new();
-    for &num in nums.iter() {
-        if let Some(n) = nums_map.get_mut(&num) {
-            *n += 1;
-        } else {
-            nums_map.insert(num, 1);
-        }
-    }
-
-    let mut nums_ordered:Vec<i32> = nums_map.keys().map(|x|*x).collect();
-    nums_ordered.sort_by(|x, y|y.cmp(x));
-    let mut count = 0;
-    for (i, &key) in nums_ordered.iter().enumerate() {
-        let mut count_cur = *nums_map.get(&key).unwrap();
-        let mut k_op = k;
-        let mut count_pre = count_cur;
-        for &keyNext in nums_ordered.iter().skip(i+1) {
-            let mut count_next = *nums_map.get(&keyNext).unwrap();
-            let mut differ = key - keyNext;
-            if k_op < differ {
-                // 一个都不够
-                break;
-            }
-            let mut differ_sum = differ*count_next;
-            if k_op > differ_sum {
-                k_op -= differ_sum;
-                count_pre += count_next;
-                // 有多，继续
-                continue;
-            } else {
-                count_pre += k_op / differ;
-                // k用完了，到此为止
-                break;
-            }
-        }
-        count = max(count, count_pre);
-    }
-
-    count
-}
+// pub fn max_frequency_1(nums: Vec<i32>, k: i32) -> i32 {
+//     let mut nums_map:HashMap<i32, i32> = HashMap::new();
+//     for &num in nums.iter() {
+//         if let Some(n) = nums_map.get_mut(&num) {
+//             *n += 1;
+//         } else {
+//             nums_map.insert(num, 1);
+//         }
+//     }
+//
+//     let mut nums_ordered:Vec<i32> = nums_map.keys().map(|x|*x).collect();
+//     nums_ordered.sort_by(|x, y|y.cmp(x));
+//     let mut count = 0;
+//     for (i, &key) in nums_ordered.iter().enumerate() {
+//         let count_cur = *nums_map.get(&key).unwrap();
+//         let mut k_op = k;
+//         let mut count_pre = count_cur;
+//         for &keyNext in nums_ordered.iter().skip(i+1) {
+//             let mut count_next = *nums_map.get(&keyNext).unwrap();
+//             let mut differ = key - keyNext;
+//             if k_op < differ {
+//                 // 一个都不够
+//                 break;
+//             }
+//             let mut differ_sum = differ*count_next;
+//             if k_op > differ_sum {
+//                 k_op -= differ_sum;
+//                 count_pre += count_next;
+//                 // 有多，继续
+//                 continue;
+//             } else {
+//                 count_pre += k_op / differ;
+//                 // k用完了，到此为止
+//                 break;
+//             }
+//         }
+//         count = max(count, count_pre);
+//     }
+//
+//     count
+// }
 
 #[test]
 fn max_frequency_t2() {

@@ -72,8 +72,6 @@ pub fn open_lock(deadends: Vec<String>, target: String) -> i32 {
         }
         lock_nums = lock_nums_next;
     }
-
-    count
 }
 
 #[test]

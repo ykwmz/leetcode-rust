@@ -42,23 +42,23 @@ pub fn min_pair_sum(nums: Vec<i32>) -> i32 {
     sum as i32
 }
 
-pub fn min_pair_sum2(nums: Vec<i32>) -> i32 {
-    let mut nums_ordered = nums;
-    nums_ordered.sort();
-    let mut i = 0;
-    let mut j = nums_ordered.len()-1;
-    let mut sum = 0;
-    while i < j {
-        sum = if nums_ordered[i] + nums_ordered[j] > sum {
-            nums_ordered[i] + nums_ordered[j]
-        } else {
-            sum
-        };
-        i += 1;
-        j -= 1;
-    }
-    sum
-}
+// pub fn min_pair_sum2(nums: Vec<i32>) -> i32 {
+//     let mut nums_ordered = nums;
+//     nums_ordered.sort();
+//     let mut i = 0;
+//     let mut j = nums_ordered.len()-1;
+//     let mut sum = 0;
+//     while i < j {
+//         sum = if nums_ordered[i] + nums_ordered[j] > sum {
+//             nums_ordered[i] + nums_ordered[j]
+//         } else {
+//             sum
+//         };
+//         i += 1;
+//         j -= 1;
+//     }
+//     sum
+// }
 
 #[test]
 fn min_pair_sum_t2() {
