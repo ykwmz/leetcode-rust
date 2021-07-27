@@ -51,3 +51,5 @@ mod min_pair_sum;
 mod is_covered;
 // 1713. 得到子序列的最少操作次数
 mod min_operations;
+// 671. 二叉树中第二小的节点
+mod find_second_minimum_value;
