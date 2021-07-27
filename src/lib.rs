@@ -49,3 +49,5 @@ mod max_frequency;
 mod min_pair_sum;
 // 1893. 检查是否区域内所有整数都被覆盖
 mod is_covered;
+// 1713. 得到子序列的最少操作次数
+mod min_operations;
