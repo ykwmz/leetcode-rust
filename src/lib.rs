@@ -53,3 +53,5 @@ mod is_covered;
 mod min_operations;
 // 671. 二叉树中第二小的节点
 mod find_second_minimum_value;
+// 171. Excel表列序号
+mod title_to_number;
