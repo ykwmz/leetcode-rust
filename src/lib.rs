@@ -57,3 +57,5 @@ mod find_second_minimum_value;
 mod title_to_number;
 // 1337. 矩阵中战斗力最弱的 K 行
 mod k_weakest_rows;
+// 1137. 第 N 个泰波那契数
+mod tribonacci;
