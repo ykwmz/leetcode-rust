@@ -59,3 +59,5 @@ mod title_to_number;
 mod k_weakest_rows;
 // 1137. 第 N 个泰波那契数
 mod tribonacci;
+// 413. 等差数列划分
+mod number_of_arithmetic_slices;
