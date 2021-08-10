@@ -5,7 +5,7 @@
 //
 // 子数组 是数组中的一个连续序列。
 //
-pub fn number_of_arithmetic_slices1(nums: Vec<i32>) -> i32 {
+pub fn number_of_arithmetic_slices(nums: Vec<i32>) -> i32 {
     let mut count = 0;
     for i in 0..nums.len() {
         let mut differ = 0;
