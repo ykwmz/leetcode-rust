@@ -61,3 +61,5 @@ mod k_weakest_rows;
 mod tribonacci;
 // 413. 等差数列划分
 mod number_of_arithmetic_slices;
+// 516. 最长回文子序列
+mod longest_palindrome_subseq;
