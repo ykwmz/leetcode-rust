@@ -63,3 +63,5 @@ mod tribonacci;
 mod number_of_arithmetic_slices;
 // 516. 最长回文子序列
 mod longest_palindrome_subseq;
+// 551. 学生出勤记录 I
+mod check_record;
