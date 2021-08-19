@@ -65,3 +65,5 @@ mod number_of_arithmetic_slices;
 mod longest_palindrome_subseq;
 // 551. 学生出勤记录 I
 mod check_record;
+// 345. 反转字符串中的元音字母
+mod reverse_vowels;
