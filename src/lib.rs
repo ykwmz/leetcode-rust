@@ -67,3 +67,5 @@ mod longest_palindrome_subseq;
 mod check_record;
 // 345. 反转字符串中的元音字母
 mod reverse_vowels;
+// 541. 反转字符串 II
+mod reverse_str;
