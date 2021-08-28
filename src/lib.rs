@@ -71,3 +71,5 @@ mod reverse_vowels;
 mod reverse_str;
 // 443. 压缩字符串
 mod compress;
+// 1480. 一维数组的动态和
+mod running_sum;
