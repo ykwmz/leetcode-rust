@@ -73,3 +73,5 @@ mod reverse_str;
 mod compress;
 // 1480. 一维数组的动态和
 mod running_sum;
+// 1588. 所有奇数长度子数组的和
+mod sum_odd_length_subarrays;
