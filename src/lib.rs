@@ -75,3 +75,5 @@ mod compress;
 mod running_sum;
 // 1588. 所有奇数长度子数组的和
 mod sum_odd_length_subarrays;
+// 704. 二分查找
+mod search2;
