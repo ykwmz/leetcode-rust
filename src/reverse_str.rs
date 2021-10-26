@@ -12,16 +12,16 @@ pub fn reverse_str(s: String, k: i32) -> String {
     loop {
         match len_left  {
             l if l >= key*2 => {
-                &s_bytes[len-l..len-l+key].reverse();
+                s_bytes[len-l..len-l+key].reverse();
                 len_left -= key*2;
                 continue;
             },
             l if l >= key => {
-                &s_bytes[len-l..len-l+key].reverse();
+                s_bytes[len-l..len-l+key].reverse();
                 break;
             },
             l => {
-                &s_bytes[len-l..len].reverse();
+                s_bytes[len-l..len].reverse();
                 break;
             }
         }
