@@ -83,3 +83,5 @@ mod search_matrix;
 mod find_min_difference;
 // 219. 存在重复元素 II
 mod contains_nearby_duplicate;
+// 521. 最长特殊序列 Ⅰ
+mod find_lu_slength;
