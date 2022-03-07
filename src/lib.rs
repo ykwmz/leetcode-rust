@@ -85,3 +85,5 @@ mod find_min_difference;
 mod contains_nearby_duplicate;
 // 521. 最长特殊序列 Ⅰ
 mod find_lu_slength;
+// 504. 七进制数
+mod convert_to_base7;
