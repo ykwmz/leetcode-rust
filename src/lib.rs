@@ -87,3 +87,5 @@ mod contains_nearby_duplicate;
 mod find_lu_slength;
 // 504. 七进制数
 mod convert_to_base7;
+// 66. 加一
+mod plus_one;
